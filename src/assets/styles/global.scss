@@ -1,11 +1,40 @@
-$dark: #fafafa;
-$light: #1d1d1d;
+$dark: #1d1d1d;
+$light: #fafafa;
 
 @import './_cardform';
-@import './__card__container';
+@import './__cardlist__container';
 
 body {
-    color: $light;
-    background-color: $dark;
+    margin: 0;
+    color: $dark;
+    background-color: $light;
     font-family: 'Inter', sans-serif;
+}
+
+.main__container{
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 7px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    background: #0071e3;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
 }

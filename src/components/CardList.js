@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../config/firebase";
 import "firebase/firestore";
+import { BiRefresh } from "react-icons/bi";
 
 function CardList({ form }) {
   const [cards, setCards] = useState([]);
@@ -34,7 +35,9 @@ function CardList({ form }) {
   };
 
   return (
-    <div>
+    <div className="cardlist__container">
+      
+      <div className="refresh" onClick={() => setShowAnswer({})}><BiRefresh /></div>
       {cards &&
         cards.map((card) => {
           const key = card.id;
@@ -47,18 +50,17 @@ function CardList({ form }) {
 
           return (
             <div className="card__container">
-              <div key={card.id}>
+              <div className="card__content" key={card.id}>
                 {card.question}{" "}
                 {reveal ? (
                   <strong>{card.answer}</strong>
                 ) : (
-                  <button onClick={() => handleClick(card.id)}>show</button>
+                  <span onClick={() => handleClick(card.id)}>View</span>
                 )}
               </div>
             </div>
           );
         })}
-      <button onClick={() => setShowAnswer({})}>Reset</button>
     </div>
   );
 }

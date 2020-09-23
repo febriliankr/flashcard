@@ -1,0 +1,45 @@
+.cardlist__container {
+  background-color: $light;
+  width: 100%;
+  min-height: 70vh;
+  padding: 10px;
+  
+
+  .refresh{
+    position: absolute;
+    right: 20px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 0px;
+    cursor: pointer;
+    font-size: 50px;
+    &:hover{
+      color: rgb(0, 94, 235);
+    }
+  }
+
+  .card__container {
+    
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    padding: 25px;
+    width: max-content;
+    margin: 10px;
+    box-shadow: 0px 5px 15px 3px rgba(121, 121, 121, 0.137);
+
+    .card__content{
+      max-width: 700px;
+    }
+
+    span {
+      color: blue;
+      text-decoration: none;
+      
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

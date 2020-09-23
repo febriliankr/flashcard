@@ -1,26 +1,65 @@
-.cardform {
-  input[type="text"],
-  select {
-    background-color: $dark;
-    color: $light;
-    width: 300px;
-    padding: 8px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.cardform__container {
+  background-color: rgb(26, 26, 26);
+  padding: 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+
+  .copyright {
+      color: $light;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 200;
+      a {
+        text-decoration: none;
+        color: white;
+      }
   }
 
-  button {
-    width: 100px;
-    border: 1px solid #ccc;
-    background-color: $dark;
-    color: $light;
-    padding: 10px 10px;
-    margin: 8px 0;
+  section {
+    padding-top: 100px;
+  }
+
+  h1 {
+      color: $light;
+      margin: 0;
+  }
+
+  p {
+    margin-top: 10px;
+    color: rgb(179, 179, 179);
+    font-weight: 300;
     
-    border-radius: 5px;
-    cursor: pointer;
+  }
+
+  form {
+
+    input[type="text"],
+    select {
+      background-color: transparent;
+      color: $light;
+      width: 300px;
+      padding: 8px 10px;
+      margin: 8px 0;
+      font-size: 16px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      border: 1px solid #ccc;
+      background-color: transparent;
+      color: $light;
+      font-size: 16px;
+      padding: 10px 5px;
+      margin: 8px 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   }
 }

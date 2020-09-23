@@ -1,3 +1,5 @@
-# Flashcard App
+# Flashcard App ⚡
 
-Flashcard app for studying medicine purposes
+Flashcard app for studying
+
+by Febrilian Kristiawan

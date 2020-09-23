@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import CardForm from './components/CardForm'
-import { FaBeer } from 'react-icons/fa';
+
 import CardList from './components/CardList';
 
 function App() {
@@ -10,10 +10,8 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="main__container">
       <CardForm form={form} setForm={setForm}/>
-      <FaBeer/>
-      <p>{JSON.stringify(form)}</p>
       <CardList form={form}/>
     </div>
   )

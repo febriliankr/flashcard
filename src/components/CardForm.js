@@ -21,7 +21,9 @@ function CardForm({ form, setForm }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("e.target", form);
+
+    if(!form.question){return}
+    if(!form.answer){return}
 
     db.collection("flashcards").add({
       question: form.question,
@@ -36,11 +38,15 @@ function CardForm({ form, setForm }) {
   };
 
   return (
-    <>
-      <form className="cardform" onSubmit={handleSubmit}>
+    <div className="cardform__container">
+
+    <section>
+    <h1>Flashcard App <span role="img" aria-label="flash">⚡</span></h1>
+    <p>Stack it up to rise your grades up!</p>
+      <form onSubmit={handleSubmit}>
         <div>
-          <label>Question: </label>
           <input
+          placeholder="Question..."
             type="text"
             name="question"
             onChange={handleChange}
@@ -49,18 +55,23 @@ function CardForm({ form, setForm }) {
           />
         </div>
         <div>
-          <label>Answer: </label>
           <input
             type="text"
             name="answer"
             onChange={handleChange}
             value={form.answer}
+            placeholder="Answer..."
           />
         </div>
-        <button onClick={handleSubmit}>Add</button>
+        <button onClick={handleSubmit}><span role="img" aria-label="sheep">🐑</span>Add</button>
       </form>
-    </>
+      
+      </section>
+      
+      <div className="copyright">Copyright © 2020 <a href="http://febrilian.com">Febrilian</a></div>
+    </div>
   );
 }
+
 
 export default CardForm;
