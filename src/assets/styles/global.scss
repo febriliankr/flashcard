@@ -1,0 +1,11 @@
+$dark: #fafafa;
+$light: #1d1d1d;
+
+@import './_cardform';
+@import './__card__container';
+
+body {
+    color: $light;
+    background-color: $dark;
+    font-family: 'Inter', sans-serif;
+}

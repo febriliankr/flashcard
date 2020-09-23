@@ -1,0 +1,26 @@
+.cardform {
+  input[type="text"],
+  select {
+    background-color: $dark;
+    color: $light;
+    width: 300px;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100px;
+    border: 1px solid #ccc;
+    background-color: $dark;
+    color: $light;
+    padding: 10px 10px;
+    margin: 8px 0;
+    
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
